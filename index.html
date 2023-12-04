@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persnoanl Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo">
+                <ul>
+                    <li><a class="active" href="#Home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer/React js Developer</p>
+                <h1>Hi, I am <span>Mughees.</span> <br>From Pakistan.</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+<!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                <img src="images/user_2.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm <span> <h2> Mughees ur Rehman </h2> </span> A web developer driven by a passion for creating remarkable online experiences.I specialize in building responsive, user-friendly websites. Proficient in HTML, CSS, JavaScript, and React js!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>React js </span><br>React App Development</li>
+                            <li><span>App Development </span><br>Android/ios App</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                       <p>No Experience Yet</p>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>React js</li>
+                            <li><span>2023</span><br>Web Development</li>
+                            <li><span>2022 </span><br>Front End Devloper</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links')
+        var tabcontents = document.getElementsByClassName('tab-contents')
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-tab");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-link");
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.getElementsByid(classname).classlist.add("active-tab");
+        }
+    </script>
+</body>  
+
+</html>
